@@ -1,0 +1,52 @@
+#include <iostream>
+
+using namespace std;
+
+int sumatorio(int num1, int num2);
+
+int main()
+{
+	int a, b;
+    cout << "Ingrese el primer numero: ";
+    cin >> b;
+    while (b < 0)
+    {
+    	cout << "Ingrese un numero positivo: ";
+    	cin >> b;
+    }
+    if (b >= 0)
+    {
+    	cout << "Ingrese el numero final para la sumatoria: ";
+    	cin >> a;
+    	while (a <= b)
+    	{
+    	cout << "Ingrese otro numero (No puede ser menor que el inicial, solo positivos): ";
+    	cin >> a;
+    }
+    if (a >= b)
+    {
+    	while ((a >= b) && (b != 0))
+    	{
+    		cout << "La sumatoria de los numeros es: " << sumatorio(a, b) << endl;
+    		cout << "Ingrese el primer numero (0 para terminar): ";
+            cin >> b;
+            cout << "Ingrese el numero final para la sumatoria: ";
+        	cin >> a;
+		}
+    }
+    }
+    return 0;
+}
+
+int sumatorio(int num1, int num2)
+{
+	int suma = 0, sis;
+	while (num2 <= num1)
+	{
+    	suma = suma + num2;
+    	num2++;
+    }
+    sis = sis + num1;
+    
+    return suma;
+}
